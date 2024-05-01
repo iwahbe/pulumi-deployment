@@ -1,0 +1,28 @@
+{
+  "name": "deployment",
+  "displayName": "Pulumi Service Deployment",
+  "publisher": "iwahbe",
+  "meta": {
+    "moduleFormat": "(.*)"
+  },
+  "config": {},
+  "provider": {
+    "type": "object"
+  },
+  "resources": {
+    "deployment:index:GitHub": {
+      "description": "A [deployment](https://www.pulumi.com/docs/pulumi-cloud/deployments/) in the Pulumi service with all the defaults.\n\nThe deployment is set to trigger on the main branch of the project this resource is in.\n\nThis resource must be used from a GitHub Repo.",
+      "properties": {
+        "DeploymentID": {
+          "type": "string",
+          "description": "The ID of the resulting deployment"
+        }
+      },
+      "type": "object",
+      "required": [
+        "DeploymentID"
+      ],
+      "isComponent": true
+    }
+  }
+}
